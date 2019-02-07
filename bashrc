@@ -8,6 +8,7 @@ alias j='jobs -l'
 alias path='echo -e ${PATH//:/\\n}'
 alias du='du -kh'       # Makes a more readable output.
 alias df='df -kTh'
+alias pserve="python -m $(python -c 'import sys; print("http.server" if sys.version_info[:2] > (2,7) else "SimpleHTTPServer")')"
 
 #-------------------
 # ls commands
