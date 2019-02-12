@@ -1,7 +1,7 @@
 
 
 #-------------------
-# Personnal Aliases
+# Personal Aliases
 #-------------------
 alias h='history'
 alias j='jobs -l'
@@ -43,6 +43,7 @@ alias glastblock='git diff $(git log -1 --before=@{4.hours.ago} --format=%H) --s
 alias glastday='git diff $(git log -1 --before=@{last.day} --format=%H) --stat' 
 alias glastweek='git diff $(git log -1 --before=@{last.week} --format=%H) --shortstat | uniq' 
 alias glastmonth='git diff $(git log -1 --before=@{last.month} --format=%H) --shortstat | uniq'
+alias gchfiles='git diff-tree --no-commit-id --name-only -r'
 
 #-------------------
 # misc
