@@ -1,0 +1,27 @@
+[push]
+	default = simple
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+[color]
+	ui = true
+
+[alias]
+	last = log -1 --stat
+	cdf = clean -df
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	st = status -sb
+	br = branch
+	unstage = reset HEAD --
+	dc = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	lo = log --oneline
+	find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
+	cf = diff-tree --no-commit-id --name-only -r
+	log-blame = log -p -M --follow --stat -- 
+	ssn = shortlog -s -n
+
