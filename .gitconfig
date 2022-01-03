@@ -1,13 +1,56 @@
-[push]
-	default = simple
-
 [core]
-	trustctime = false
+    
+    trustctime = false
 	editor = vim
 	filemode = false
 
 [color]
-	ui = true
+
+    # Use colors in Git commands where possible
+    ui = auto 
+
+[color "branch"]
+
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+
+    meta = yellow bold
+    frag = magenta bold # line information
+    old = red # deletions
+    new = green # additions
+
+[color "status"]
+
+    added = yellow
+    changed = green
+    untracked = cyan
+
+
+[branch]
+
+    # Show most recently changed branches first.
+    sort = -committerdate
+
+[diff "bin"]
+
+    # Use 'hexdump' to diff binary files.
+    textconv = hexdump -v -C
+
+[merge]
+
+    # Include summaries of merged conflicts in newly created merge commit messages
+    log = true
+
+[push]
+
+    # See https://rakhesh.com/coding/git-push-default/ for an explanation
+    default = simple
+
+    # Only push annotated tags.
+    followTags = true
 
 [alias]
 	cdf = clean -df
@@ -19,14 +62,15 @@
 	br = branch
 	unstage = reset HEAD --
 	dc = diff --cached
-    cf = diff-tree --no-commit-id --name-only -r
+    dt = diff-tree --no-commit-id --name-only -r
 
-    # Logs
+    # Log the last commit message with statistics
     last = log -1 --stat
+
+    # Show log  graph
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
 	find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
-	log-blame = log -p -M --follow --stat -- 
-    ssn = shortlog -s -n
+    log-blame = log -p -M --follow --stat -- 
     # View abbreviated SHA, description, and history graph of the latest 20 commits.
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
     lo = log --oneline
