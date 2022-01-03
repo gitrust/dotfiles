@@ -48,6 +48,11 @@ alias gchfiles='git diff-tree --no-commit-id --name-only -r'
 #-------------------
 alias diff="diff --color"
 
+# pbcopy and pbpaste are known on MacOS
+# we use an alias to imitate their behavior
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 #-------------------
 # dotfiles 
 #-------------------
