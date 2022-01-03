@@ -1,14 +1,15 @@
 [push]
 	default = simple
+
 [core]
 	trustctime = false
 	editor = vim
 	filemode = false
+
 [color]
 	ui = true
 
 [alias]
-	last = log -1 --stat
 	cdf = clean -df
 	cp = cherry-pick
 	co = checkout
@@ -18,10 +19,38 @@
 	br = branch
 	unstage = reset HEAD --
 	dc = diff --cached
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
-	lo = log --oneline
-	find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
-	cf = diff-tree --no-commit-id --name-only -r
-	log-blame = log -p -M --follow --stat -- 
-	ssn = shortlog -s -n
+    cf = diff-tree --no-commit-id --name-only -r
 
+    # Logs
+    last = log -1 --stat
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
+	log-blame = log -p -M --follow --stat -- 
+    ssn = shortlog -s -n
+    # View abbreviated SHA, description, and history graph of the latest 20 commits.
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    lo = log --oneline
+
+    # Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch --all
+    remotes = remote --verbose
+
+    # List aliases
+    aliases = config --get-regexp alias
+
+    # Amend currently staged files to the latest commit
+    amend = commit --amend --reuse-message=HEAD
+
+    # Interactive rebase with the given number of latest commits.
+	reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+    # Find commits by commit message
+    findm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+    # Remove branches that have already been merged with main.
+	# a.k.a. ‘delete merged’
+    dmerged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+    # List contributors with number of commits.
+	contributors = shortlog --summary --numbered
