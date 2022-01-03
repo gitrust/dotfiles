@@ -1,8 +1,8 @@
 [core]
     
     trustctime = false
-	editor = vim
-	filemode = false
+    editor = vim
+    filemode = false
 
 [color]
 
@@ -53,15 +53,15 @@
     followTags = true
 
 [alias]
-	cdf = clean -df
-	cp = cherry-pick
-	co = checkout
-	cl = clone
-	ci = commit
-	st = status -sb
-	br = branch
-	unstage = reset HEAD --
-	dc = diff --cached
+    cdf = clean -df
+    cp = cherry-pick
+    co = checkout
+    cl = clone  
+    ci = commit
+    st = status -sb
+    br = branch
+    unstage = reset HEAD --
+    dc = diff --cached
     dt = diff-tree --no-commit-id --name-only -r
 
     # Log the last commit message with statistics
@@ -76,8 +76,8 @@
     lo = log --oneline
 
     # Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch --all
+    tags = tag -l
+    branches = branch --all
     remotes = remote --verbose
 
     # List aliases
@@ -87,7 +87,7 @@
     amend = commit --amend --reuse-message=HEAD
 
     # Interactive rebase with the given number of latest commits.
-	reb = "!r() { git rebase -i HEAD~$1; }; r"
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
 
     # Find commits by commit message
     findm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
@@ -97,4 +97,4 @@
     dmerged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
     # List contributors with number of commits.
-	contributors = shortlog --summary --numbered
+    contributors = shortlog --summary --numbered
