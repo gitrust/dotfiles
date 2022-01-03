@@ -1,15 +1,14 @@
 filetype plugin indent on
+filetype indent on
 autocmd FileType yaml,yml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 set nocompatible          " get rid of Vi compatibility mode. SET FIRST!
-filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 set t_Co=256              " enable 256-color mode.
 syntax enable             " enable syntax highlighting (previously syntax on).
-colorscheme distinguished " set colorscheme
 set number                " show line numbers
 set backspace=indent,eol,start  " Allow backspacing over autoindent, line breaks and start of insert action
 set laststatus=2          " last window always has a statusline
-filetype indent on        " activates indenting for files
+colorscheme desert 
 set hlsearch              " highlight searches
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
