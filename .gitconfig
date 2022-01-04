@@ -24,8 +24,8 @@
 
 [color "status"]
 
-    added = yellow
-    changed = green
+    added = green
+    changed = yellow 
     untracked = cyan
 
 
@@ -69,7 +69,7 @@
 
     # Show log  graph
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
-	find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
+    find = log --all --pretty=\"format:%Cgreen%H %Cblue%s\n%b%Creset\" --name-status --grep 
     log-blame = log -p -M --follow --stat -- 
     # View abbreviated SHA, description, and history graph of the latest 20 commits.
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
