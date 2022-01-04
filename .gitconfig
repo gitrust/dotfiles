@@ -81,7 +81,7 @@
     remotes = remote --verbose
 
     # List aliases
-    aliases = config --get-regexp alias
+    alias = config --get-regexp alias
 
     # Amend currently staged files to the latest commit
     amend = commit --amend --reuse-message=HEAD
