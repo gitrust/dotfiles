@@ -9,7 +9,9 @@ case $- in
 esac
 
 # Load the shell dotfiles, and then some:
-for file in ~/.{bash_prompt,exports,bash_aliases}; do
+# - order matters.
+# - ~/.extra can be used for other settings you don’t want to commit.
+for file in ~/.{bash_prompt,exports,bash_aliases,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
