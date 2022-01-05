@@ -71,6 +71,7 @@ alias diff="diff --color"
 # - clipboard is for text you copy with CTRL+C
 alias pbcopy='xclip -selection primary'
 alias pbpaste='xclip -selection primary -o'
+alias pbclear='echo -n | xclip -selection primary'
 
 #-------------------
 # dotfiles alias for 'git' command
