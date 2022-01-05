@@ -67,8 +67,10 @@ alias diff="diff --color"
 
 # pbcopy and pbpaste are known on MacOS
 # we use an alias to imitate their behavior
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+# - primary is for text you have selected past
+# - clipboard is for text you copy with CTRL+C
+alias pbcopy='xclip -selection primary'
+alias pbpaste='xclip -selection primary -o'
 
 #-------------------
 # dotfiles alias for 'git' command
