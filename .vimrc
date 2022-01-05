@@ -9,6 +9,7 @@ set number                " show line numbers
 set backspace=indent,eol,start  " Allow backspacing over autoindent, line breaks and start of insert action
 set laststatus=2          " last window always has a statusline
 set background=dark       " set dark background for solarized theme
+"let g:solarized_termcolors=256 " use degraded 256 colorscheme for solarized theme
 colorscheme solarized
 set hlsearch              " highlight searches
 set incsearch             " But do highlight as you type your search.
