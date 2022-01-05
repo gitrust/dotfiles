@@ -8,7 +8,8 @@ syntax enable             " enable syntax highlighting (previously syntax on).
 set number                " show line numbers
 set backspace=indent,eol,start  " Allow backspacing over autoindent, line breaks and start of insert action
 set laststatus=2          " last window always has a statusline
-colorscheme desert 
+set background=dark       " set dark background for solarized theme
+colorscheme solarized
 set hlsearch              " highlight searches
 set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
