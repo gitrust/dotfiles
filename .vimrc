@@ -24,7 +24,7 @@ set shiftround            " always indent/outdent to the nearest tabstop
 set expandtab             " use spaces instead of tabs
 set smarttab              " use tabs at the start of a line, spaces elsewhere
 set wrap                  " wrap long lines of text
-set wildmenu			  " better command-line completion
+set wildmenu              " better command-line completion
 set showcmd               " Show partial commands in the last line of the screen
 set visualbell            " use visual bell instead of beeping
 set encoding=utf-8        " set file encoding
