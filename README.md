@@ -14,7 +14,7 @@ Custom configuration will go to `$HOME/.extra`. This file can be creatd optional
 E.g.:
 
 ```
-GIT_AUTHOR_NAME="gitrust"
+GIT_AUTHOR_NAME="your-name"
 git config --global user.name "$GIT_AUTHOR_NAME" 
 ```
 
