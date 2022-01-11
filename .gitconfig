@@ -104,5 +104,3 @@
 
     # Only push annotated tags.
     followTags = true
-
-
