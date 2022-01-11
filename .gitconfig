@@ -1,57 +1,3 @@
-[core]
-    
-    trustctime = false
-    editor = vim
-    filemode = false
-
-[color]
-
-    # Use colors in Git commands where possible
-    ui = auto 
-
-[color "branch"]
-
-    current = yellow reverse
-    local = yellow
-    remote = green
-
-[color "diff"]
-
-    meta = yellow bold
-    frag = magenta bold # line information
-    old = red # deletions
-    new = green # additions
-
-[color "status"]
-
-    added = green
-    changed = yellow 
-    untracked = cyan
-
-
-[branch]
-
-    # Show most recently changed branches first.
-    sort = -committerdate
-
-[diff "bin"]
-
-    # Use 'hexdump' to diff binary files.
-    textconv = hexdump -v -C
-
-[merge]
-
-    # Include summaries of merged conflicts in newly created merge commit messages
-    log = true
-
-[push]
-
-    # See https://rakhesh.com/coding/git-push-default/ for an explanation
-    default = simple
-
-    # Only push annotated tags.
-    followTags = true
-
 [alias]
     cdf = clean -df
     cp = cherry-pick
@@ -98,3 +44,65 @@
 
     # List contributors with number of commits.
     contributors = shortlog --summary --numbered
+
+[branch]
+
+    # Show most recently changed branches first.
+    sort = -committerdate
+		
+[color]
+
+    # Use colors in Git commands where possible
+    ui = auto 
+
+[color "branch"]
+
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+
+    meta = yellow bold
+    frag = magenta bold # line information
+    old = red # deletions
+    new = green # additions
+
+[color "status"]
+
+    added = green
+    changed = yellow 
+    untracked = cyan
+
+[core]
+
+    # ctime differences between the index and the working tree
+    trustctime = false
+		# default editor for commit and tag, can be overriden using GIT_EDITOR variable
+    editor = vim
+
+[diff "bin"]
+
+    # Use 'hexdump' to diff binary files.
+    textconv = hexdump -v -C
+
+[merge]
+
+    # Include summaries of merged conflicts in newly created merge commit messages
+    log = true
+
+[mergetool]
+		keeptemporaries = false
+		keepbackups = false
+		prompt = false
+		trustexitcode = false
+
+[push]
+
+    # See https://rakhesh.com/coding/git-push-default/ for an explanation
+    default = simple
+
+    # Only push annotated tags.
+    followTags = true
+
+
