@@ -46,7 +46,7 @@ prompt_git() {
 		echo '(unknown)')";
 
 	repoUrl="$(git config --get remote.origin.url)";
-    # dirty check takes too long for chromium
+        # dirty check takes too long for chromium
 	if grep -q 'chromium/src.git' <<< "${repoUrl}"; then
 		s+='*';
 	else
