@@ -16,9 +16,6 @@ set constantshow
 # When a file does not end with a newline, don’t automatically add one.
 set nonewlines
 
-# Convert each typed tab to spaces
-set tabstopspaces
-
 # Use a tab size of number columns.
 set tabsize 2
 
