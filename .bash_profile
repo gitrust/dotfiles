@@ -51,3 +51,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# The "Super Search" alias
+function sfs() {
+  rg --line-number --column --no-heading --color=always --smart-case "$1" | \
+  fzf --ansi \
+      --delimiter : \
+      --preview 'batcat --style=numbers --color=always --highlight-line {2} {1}' \
+      --preview-window 'right:60%:wrap'
+}
+
+# Init zoxide
+eval "$(zoxide init bash)"   

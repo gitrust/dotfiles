@@ -77,3 +77,6 @@ alias pbclear='echo -n | xclip -selection primary'
 # dotfiles git repository
 #-------------------
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Fix the Ubuntu naming conflict
+alias bat='batcat'
